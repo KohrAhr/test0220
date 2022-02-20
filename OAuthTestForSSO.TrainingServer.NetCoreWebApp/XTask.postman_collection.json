@@ -1,0 +1,105 @@
+{
+	"info": {
+		"_postman_id": "edd57ff6-6ce7-4d3c-8a3f-06571a008e52",
+		"name": "XTask",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Crypt. Post. Form.",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "0dbd3885-86d9-46bb-896d-954ded0e2207",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "blankValue",
+							"value": "12345678",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/TripleDesEncryption",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"TripleDesEncryption"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Decrypt. Put. Form",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "xValue",
+							"value": "8D717A399B269ACB0C00FE7D8AB1B840",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/TripleDesDecryption",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"TripleDesDecryption"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Self test. Get.",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/TripleDes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"TripleDes"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
